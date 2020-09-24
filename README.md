@@ -5,10 +5,10 @@
 Answer the following questions about the HTTP request and response process.
 
 1. What type of architecture does the HTTP request and response process occur in?
-  *HTTP is based on the client-server architecture model and a stateless request/response protocol that operates by exchanging messages across a reliable TCP/IP connection.
+  * HTTP is based on the client-server architecture model and a stateless request/response protocol that operates by exchanging messages across a reliable TCP/IP connection.
 
 2. What parts make up an `HTTP request`?
-   *The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+   * The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
 
 3. What is the optional part of an HTTP request?
 Anything below `headers`, which is `Request body` is optional.
