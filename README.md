@@ -5,30 +5,32 @@
 Answer the following questions about the HTTP request and response process.
 
 1. What type of architecture does the HTTP request and response process occur in?
-  * HTTP is based on the client-server architecture model and a stateless request/response protocol that operates by exchanging messages across a reliable TCP/IP connection.
+   * HTTP is based on the client-server architecture model and a stateless request/response protocol that operates by exchanging messages across a reliable TCP/IP connection.
 
 2. What parts make up an `HTTP request`?
    * The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
 
 3. What is the optional part of an HTTP request?
-Anything below `headers`, which is `Request body` is optional.
+   * Anything below `headers`, which is `Request body` is optional.
 
 4. What three parts make up an HTTP response?
-The status line, some headers, and an optional body.
+   * The status line, some headers, and an optional body.
 
 5. Which number class of status codes represent errors?
-400 CODES
+   * 400 CODES
 
 6. What are the two most common request methods that a security professional will come across?
-GET and POST
+   * GET and POST
 
 7. Which type of HTTP request method is used for sending data?
-POST
+   * POST
 
 8. Which part of an `HTTP request` contains the data being sent to the server?
-POST
+   * POST
+   
 9. In which part of an HTTP response would the browser receive the web code to generate and style a web page?
-Cookie
+   * Cookie
+   
 #### Using cURL
 
 Answer the following questions about `curl`:
@@ -37,20 +39,20 @@ Answer the following questions about `curl`:
 The advantages of using curl are sometimes, the tools you can use to send and receive http requests are limited, so when working through a container that has no user interface, you'll need a command-line tool to send and receive http requests. And it is also a quick way to test HTTP requests in a way that can be automated.
 
 11. Which curl option is used to change the request method?
--- request: set the request type
+   * -- request: set the request type
 
 12. Which curl option is used to set request headers?
--H: Sets a request header
+   * -H: Sets a request header
 
 13. Which curl option is used to view the response header?
--I  flag to view the response headers
+   * -I  flag to view the response headers
 
 14. Which request method might an -I  flag to view the response headersattacker use to scope out usable HTTP requests that an HTTP server will accept?
-They used the OPTIONS method
+   * They used the OPTIONS method
 
 #### Sessions and Cookies
 
-Recall that HTTP servers need ways to recognize clients from one another. These are implemented through sessions and cookies.
+   * Recall that HTTP servers need ways to recognize clients from one another. These are implemented through sessions and cookies.
 
 Answer the following questions about sessions and cookies.
 
@@ -61,7 +63,7 @@ Answer the following questions about sessions and cookies.
     Content-type: text/html
     Set-Cookie: cart=Bob
     ```
-Answer: Set-Cookie
+   * Answer: Set-Cookie
 
 16. Which request header sets a cookie in the client?
 
@@ -70,7 +72,7 @@ Answer: Set-Cookie
     Host: www.example.org
     Cookie: cart=Bob
     ```
-Answer: Cookie
+   * Answer: Cookie
 
 #### Example HTTP Requests and Responses
 
@@ -92,16 +94,16 @@ username=Barbara&password=password
 ```
 
 17. What was the request method?
-POST
+   * POST
 
 18. Was the request encrypted or unencrypted?
-Yes.
+   * Yes.
 
 19. Does the request have a user session associated to it?
-Yes
+   * Yes
 
 20. What kind of data is being sent from this request body.
-Encoding: gzip, deflate, br
+   * Encoding: gzip, deflate, br
 
 #### HTTP Response Example
 
@@ -123,16 +125,16 @@ X-XSS-Protection: 1; mode=block
 ```
 
 21. What was the response status code?
-200 OK
+   * 200 OK
 
 22. Was the response encrypted or unencrypted?
-Unencrypted
+   * Unencrypted
 
 23. Does this response have a user session associated to it?
-No
+   * No
 
 24. What kind of content is likely to be in the [page content] response body?
-gzip
+   * gzip
 
 25. If your class covered security headers, what security request headers have been included?
 ``
@@ -153,7 +155,7 @@ Answer the following questions about monoliths and microservices:
 * Monitoring.
 
 27. What is a service that writes to a database and communicates to other services?
-APIs
+   * APIs
 
 28. What type of underlying technology allows for `microservices` to become scalable and have redundancy?
 Docker containers allow for `microservices` to become scalable and have redundancy. Replication of components lets you serve more clients and
@@ -164,32 +166,32 @@ provides identical backup components if one fails.
 Answer the following questions about vulnerability filtering `Trivy` scans with `jq`:
 
 29. Do `microservices` share the same kind of vulnerabilities as regular operating systems?
-Yes.
+   * Yes.
 
 30. Would an organization be more concerned with `Low` severity vulnerabilities as much as `Critical`?
-Yes.
+   * Yes.
 
 31. Would the bash tool `jq` be useful in finding certain kinds of vulnerabilities within a vulnerability report?
-Yes. Some vulnerabilities we can report are (MITM), Buffer overflow, (DoS) and Privilege escalation.
+   * Yes. Some vulnerabilities we can report are (MITM), Buffer overflow, (DoS) and Privilege escalation.
 
 #### Deploying and Testing a Container Set
 
 Answer the following questions about multi-container deployment:
 
 32. What is a tool that can be used to deploy multiple containers at once?
-Docker Compose allows us to create repeated, multi-container deployments.
+   * Docker Compose allows us to create repeated, multi-container deployments.
 
 33. What kind of file format was required for us to deploy a container set?
-Docker compose YAML file.
+   * Docker compose YAML file.
 
 #### Container Runtime Intrusion Detection Systems
 
 34. What is a tool used to actively detects intrusion behavior within containers?
-Falco is an open-source CIDS that alerts security professionals to potential intrusion attempts.
+   * Falco is an open-source CIDS that alerts security professionals to potential intrusion attempts.
 
 35. What high-value system file might an intruder view that would trigger a `sensitive file opening` alert?
-such as /etc/shadow
+   * such as /etc/shadow
 
 36. What kind of intruder action might trigger an alert from a container IDS that says `shell configuration file has been modified`?
-such as `adduser`
+   * such as `adduser`
 ---
